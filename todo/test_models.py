@@ -8,3 +8,8 @@ class TestModels(TestCase):
         item = Item.objects.create(name='Test Todo Item')
         self.assertFalse(item.done)
 
+    def test_item_string_method_retunrs_name(self):
+        item = Item.objects.create(name='Test Todo Item')
+        self.assertEqual(str(item), 'Test Todo Item')
+
+
